@@ -10,8 +10,6 @@ export ZSH="/Users/eslam/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="miloshadzic"
 
-PROJECT_PATHS=(/Users/eslam/Desktop/Desktop/PassAppTest)
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -78,7 +76,7 @@ plugins=(
   copyfile
   dircycle
   git-flow
-  git-prompt
+  #git-prompt
   last-working-dir
   osx
   pj
@@ -121,3 +119,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias style_last_commit="git diff-tree -r --no-commit-id --name-only HEAD | xargs bundle exec rubocop --auto-correct"
+kl_port() { kill -9 "$1"; }
+ls_port() { lsof -wni tcp:"$1"; }
